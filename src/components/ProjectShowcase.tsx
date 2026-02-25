@@ -22,25 +22,27 @@ const projects = [
       "Integrated seamless API layer connecting AI engine with modern web frontend",
       "Reusable retrieval service supporting multiple data sources",
     ],
-    image: "/assets/img/nasa-Q1p7bh3SHj8-unsplash.jpg",
+    image: "/assets/img/rag-ai.png",
     github: "https://github.com/SatyaFebi/Internal-RAG-System.git",
     external: "https://your-project-url.com",
+    badge: ["Currently in development"],
   },
   {
-    title: "ToolRoom TKR",
-    category: "Inventory & Service Management",
+    title: "Millenium Service",
+    category: "Automotive Enterprise & Automated Billing System",
     problem:
-      "Fragmented management of tools and services leading to operational inefficiency.",
+      "Scaling operational efficiency for a new service center partnership between Auto2000 and SMKN 1 Cibinong.",
     solution:
-      "A comprehensive Full-Stack system developed with Laravel and Vue.js, containerized using Docker.",
+      "A high-performance Full-Stack ecosystem integrating automated payments and notification workflows, designed to handle professional workshop standards.",
     highlights: [
-      "Modular Service Layer decoupling business logic from controllers",
-      "Advanced Logging with real-time developer dashboard for error tracing",
-      "Clean code principles with Git-based workflow for stability",
+      "Integrated Midtrans for automated billing and WAHA + n8n for real-time customer notification pipelines",
+      "Architected a modular system to support professional service standards in collaboration with Auto2000",
+      "Containerized with Docker to ensure seamless deployment and environment consistency across workshop operations",
     ],
-    image: "/assets/img/nasa-Q1p7bh3SHj8-unsplash.jpg",
+    image: "/assets/img/millenium-service.png",
     github: "https://github.com/your-username/toolroom-tkr",
     external: "https://your-project-url.com",
+    badge: ["Server offline"]
   },
   {
     title: "Secure Enterprise Audit & Reporting Ecosystem",
@@ -54,9 +56,27 @@ const projects = [
       "Built a custom CMS and automated status workflow (Review, Revision, Resolved) to ensure data integrity",
       "Implemented a single-codebase mobile solution using Ionic & Capacitor for real-time reporting",
     ],
-    image: "/assets/img/nasa-Q1p7bh3SHj8-unsplash.jpg",
+    image: "/assets/img/reporting.png",
     github: "",
     external: "",
+    badge: ["Private Repository"]
+  },
+  {
+    title: "HJC Digital Showroom & CMS",
+    category: "Enterprise Content Management System",
+    problem:
+      "Managing dynamic vehicle catalogs, real-time pricing, and promotional events across a high-traffic public website.",
+    solution:
+      "Architected a centralized CMS to manage multi-entity data including car specifications, news & events, and dynamic pricing.",
+    highlights: [
+      "Designed a flexible data schema to handle complex vehicle specifications and variants across different models",
+      "Streamlined the lead conversion process by integrating a seamless 'Test Drive' booking system",
+      "Focused on high-performance content delivery to ensure fast loading times for the public-facing catalog",
+    ],
+    image: "/assets/img/web-hjc.png",
+    github: "",
+    external: "https://web-hjc.vercel.app",
+    badge: ["Private Repository"]
   },
 ];
 
@@ -109,7 +129,8 @@ export default function ProjectShowcase() {
                   alt={project.title}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                  className="object-cover transition-all duration-1000 group-hover:scale-105"
+                  loading="eager"
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent opacity-60" />
                 <div className="absolute bottom-8 left-8 flex gap-4 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
@@ -139,14 +160,20 @@ export default function ProjectShowcase() {
                 <span className="text-xs font-bold uppercase tracking-[0.3em] text-accent mb-4">
                   {project.category}
                 </span>
-                <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-8 group-hover:text-accent transition-colors duration-500">
+                <h3 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 group-hover:text-accent transition-colors duration-500">
                   {project.title}
                 </h3>
+                
+                <div className="mb-9 border rounded-lg px-2 text-zinc-400">
+                  {project.badge.map((badge, index) => (
+                    <span key={index} className="text-xs font-semibold tracking-wide">{badge}</span>
+                  ))}
+                </div>
 
                 <div className="space-y-8 max-w-xl">
                   <div>
                     <h4 className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-2">
-                      The Challenge
+                      Challenge
                     </h4>
                     <p className="text-lg leading-relaxed text-zinc-400">
                       {project.problem}
@@ -154,7 +181,7 @@ export default function ProjectShowcase() {
                   </div>
                   <div>
                     <h4 className="text-[10px] font-black uppercase tracking-widest text-zinc-500 mb-2">
-                      The Solution
+                      Solution
                     </h4>
                     <p className="text-lg leading-relaxed text-zinc-200">
                       {project.solution}

@@ -41,7 +41,7 @@ export default function Experience() {
     <section ref={containerRef} id="experience" className="py-32">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="mb-24">
-          <h2 className="text-5xl font-bold tracking-tighter md:text-7xl uppercase italic">
+          <h2 className="text-5xl font-bold tracking-tighter md:text-7xl uppercase">
             Experience
           </h2>
           <div className="mt-6 h-1 w-24 bg-accent/40" />

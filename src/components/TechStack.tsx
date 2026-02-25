@@ -21,7 +21,7 @@ const stacks = [
   {
     name: "Tools",
     icon: Container,
-    tools: ["Docker", "Git / GitHub", "Notion", "Ubuntu", "n8n", "Figma", "Postman"],
+    tools: ["Docker", "Git / GitHub", "Notion", "Ubuntu", "n8n", "Figma", "Postman", "WAHA (WhatsApp API)"],
   },
 //   {
 //     name: "Architecture",

@@ -52,7 +52,7 @@ export default function About() {
           {/* Right */}
           <div className="about-content space-y-8">
             <p className="text-xl md:text-2xl text-zinc-300 font-light leading-relaxed">
-              I&apos;m currently a Full-Stack Developer intern at{" "}
+              I&apos;m Satya Febi Nugroho, a Full-Stack Developer intern at{" "}
               <span className="text-white font-semibold">Honda Jakarta Center</span>, I
               bridge the gap between complex business requirements and high-performance
               technical solutions.
@@ -74,8 +74,8 @@ export default function About() {
             {/* Focus highlights */}
             <div className="pt-6 flex flex-wrap gap-3">
               {[
-                "Developer Experience",
-                "Clean Architecture",
+                "Developer & User Experience",
+                "Clean Code",
                 "RAG Systems",
                 "Service Layer Design",
               ].map((tag) => (
