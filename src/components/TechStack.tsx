@@ -21,13 +21,13 @@ const stacks = [
   {
     name: "Tools",
     icon: Container,
-    tools: ["Docker", "Git / GitHub", "Notion"],
+    tools: ["Docker", "Git / GitHub", "Notion", "n8n", "Figma"],
   },
-  {
-    name: "Architecture",
-    icon: LayoutGrid,
-    tools: ["Clean Architecture", "Modular Monolith", "RESTful API Design", "Service Layer Pattern"],
-  },
+//   {
+//     name: "Architecture",
+//     icon: LayoutGrid,
+//     tools: ["Clean Architecture", "Modular Monolith", "RESTful API Design", "Service Layer Pattern"],
+//   },
 ];
 
 export default function TechStack() {
@@ -68,7 +68,7 @@ export default function TechStack() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {stacks.map((stack, i) => (
             <div
               key={i}
