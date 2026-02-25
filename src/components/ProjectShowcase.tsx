@@ -43,19 +43,20 @@ const projects = [
     external: "https://your-project-url.com",
   },
   {
-    title: "Millenium Service",
-    category: "Service Tracking System",
+    title: "Secure Enterprise Audit & Reporting Ecosystem",
+    category: "Reporting System",
     problem:
-      "Need for a high-availability service tracking system with complex status workflows.",
+      "Need for a secure, centralized system to handle sensitive reports from public and employees with a strict audit trail.",
     solution:
-      "Engineered a robust backend architecture focused on data integrity and user-centric UI.",
+      "Developed a cross-platform ecosystem (Web & Mobile) with a structured workflow engine and role-based access control for the Internal Audit division.",
     highlights: [
-      "Optimized database queries for large datasets without performance degradation",
-      "Automated environment setup using Docker, reducing onboarding time",
+      "Engineered a secure document delivery pipeline with email-verified download links for confidential files",
+      "Built a custom CMS and automated status workflow (Review, Revision, Resolved) to ensure data integrity",
+      "Implemented a single-codebase mobile solution using Ionic & Capacitor for real-time reporting",
     ],
     image: "/assets/img/nasa-Q1p7bh3SHj8-unsplash.jpg",
-    github: "https://github.com/your-username/millenium-service",
-    external: "https://your-project-url.com",
+    github: "",
+    external: "",
   },
 ];
 

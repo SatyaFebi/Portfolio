@@ -43,7 +43,7 @@ export default function About() {
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-20 items-start">
           {/* Left */}
           <div>
-            <h2 className="text-5xl font-bold tracking-tighter md:text-7xl uppercase italic">
+            <h2 className="text-5xl font-bold tracking-tighter md:text-7xl uppercase">
               About
             </h2>
             <div className="mt-6 h-1 w-24 bg-accent/40" />

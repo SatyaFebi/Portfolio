@@ -11,7 +11,7 @@ const stacks = [
   {
     name: "Core",
     icon: Code2,
-    tools: ["PHP (Laravel)", "JavaScript (Vue.js, Next.js)", "Python (AI/ML)"],
+    tools: ["PHP (Laravel)", "JavaScript (Vue.js, Next.js, React.js)", "Python (AI/ML)", "Ionic & Capacitor (Mobile)", "MySQL", "PostgreSQL"],
   },
   {
     name: "AI / Data",
@@ -21,7 +21,7 @@ const stacks = [
   {
     name: "Tools",
     icon: Container,
-    tools: ["Docker", "Git / GitHub", "Notion", "n8n", "Figma"],
+    tools: ["Docker", "Git / GitHub", "Notion", "Ubuntu", "n8n", "Figma", "Postman"],
   },
 //   {
 //     name: "Architecture",
@@ -60,7 +60,7 @@ export default function TechStack() {
     >
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         <div className="mb-20 text-center">
-          <h2 className="text-3xl font-bold tracking-tight md:text-5xl uppercase italic">
+          <h2 className="text-4xl font-bold tracking-tight md:text-5xl uppercase">
             Tech Stack
           </h2>
           <p className="mt-4 text-zinc-400 max-w-2xl mx-auto">
