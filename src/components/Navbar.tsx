@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import gsap from "@/lib/gsap";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -29,6 +30,31 @@ export default function Navbar() {
     return () => { document.body.style.overflow = ""; };
   }, [isOpen]);
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    if (href === "#") {
+      gsap.to(window, {
+        duration: 1.5,
+        scrollTo: { y: 0 },
+        ease: "power4.inOut",
+      });
+      return;
+    }
+
+    const target = document.querySelector(href);
+    if (target) {
+      gsap.to(window, {
+        duration: 1.5,
+        scrollTo: {
+          y: target,
+          offsetY: 80,
+        },
+        ease: "power4.inOut",
+      });
+      setIsOpen(false);
+    }
+  };
+
   return (
     <>
       <nav
@@ -40,7 +66,11 @@ export default function Navbar() {
         )}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex items-center justify-between">
-          <a href="#" className="flex items-center gap-3 group">
+          <a 
+            href="#" 
+            onClick={(e) => handleScroll(e, "#")}
+            className="flex items-center gap-3 group"
+          >
             <div className="h-10 w-10 rounded-xl bg-accent flex items-center justify-center text-black font-black text-xl transition-transform group-hover:scale-110">
               S
             </div>
@@ -55,6 +85,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={(e) => handleScroll(e, link.href)}
                 className="text-[11px] font-bold uppercase tracking-[0.25em] text-zinc-400 hover:text-white transition-colors"
               >
                 {link.name}
@@ -63,6 +94,7 @@ export default function Navbar() {
             <div className="h-4 w-px bg-zinc-700 mx-2" />
             <a
               href="#contact"
+              onClick={(e) => handleScroll(e, "#contact")}
               className="rounded-full bg-white px-6 py-2.5 text-[11px] font-black uppercase tracking-widest text-black hover:bg-accent hover:text-white transition-all duration-300"
             >
               LET&apos;S TALK
@@ -104,7 +136,7 @@ export default function Navbar() {
           <a
             key={link.name}
             href={link.href}
-            onClick={() => setIsOpen(false)}
+            onClick={(e) => handleScroll(e, link.href)}
             className="text-3xl font-black uppercase tracking-tighter text-white hover:text-accent transition-all duration-300"
             style={{
               transitionDelay: isOpen ? `${i * 60}ms` : "0ms",
@@ -117,7 +149,7 @@ export default function Navbar() {
         ))}
         <a
           href="#contact"
-          onClick={() => setIsOpen(false)}
+          onClick={(e) => handleScroll(e, "#contact")}
           className="mt-4 rounded-full bg-accent px-8 py-3 text-sm font-black uppercase tracking-widest text-white hover:bg-white hover:text-black transition-all duration-300"
           style={{
             transitionDelay: isOpen ? `${navLinks.length * 60}ms` : "0ms",
