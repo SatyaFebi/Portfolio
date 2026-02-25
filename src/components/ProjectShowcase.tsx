@@ -24,8 +24,8 @@ const projects = [
     ],
     image: "/assets/img/rag-ai.png",
     github: "https://github.com/SatyaFebi/Internal-RAG-System.git",
-    external: "https://your-project-url.com",
-    badge: ["Currently in development"],
+    external: "/not-found",
+    badge: ["Currently in development", "Server Offline"],
   },
   {
     title: "Millenium Service",
@@ -40,9 +40,9 @@ const projects = [
       "Containerized with Docker to ensure seamless deployment and environment consistency across workshop operations",
     ],
     image: "/assets/img/millenium-service.png",
-    github: "https://github.com/your-username/toolroom-tkr",
-    external: "https://your-project-url.com",
-    badge: ["Server offline"]
+    github: "/not-found",
+    external: "/not-found",
+    badge: ["Server Offline", "Private Repository"]
   },
   {
     title: "Secure Enterprise Audit & Reporting Ecosystem",
@@ -57,8 +57,8 @@ const projects = [
       "Implemented a single-codebase mobile solution using Ionic & Capacitor for real-time reporting",
     ],
     image: "/assets/img/reporting.png",
-    github: "",
-    external: "",
+    github: "/not-found",
+    external: "/not-found",
     badge: ["Private Repository"]
   },
   {
@@ -74,7 +74,7 @@ const projects = [
       "Focused on high-performance content delivery to ensure fast loading times for the public-facing catalog",
     ],
     image: "/assets/img/web-hjc.png",
-    github: "",
+    github: "/not-found",
     external: "https://web-hjc.vercel.app",
     badge: ["Private Repository"]
   },
@@ -164,9 +164,9 @@ export default function ProjectShowcase() {
                   {project.title}
                 </h3>
                 
-                <div className="mb-9 border rounded-lg px-2 text-zinc-400">
+                <div className="mb-9 flex gap-2 text-zinc-400">
                   {project.badge.map((badge, index) => (
-                    <span key={index} className="text-xs font-semibold tracking-wide">{badge}</span>
+                     <span key={index} className="text-xs border rounded-lg px-2 font-semibold tracking-wide">{badge}</span>
                   ))}
                 </div>
 
