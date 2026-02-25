@@ -9,11 +9,17 @@ gsap.registerPlugin(ScrollTrigger);
 
 const blogs = [
   {
-    title: "Why I Build Systems for Developers, Not Just Users: A Deep Dive into DX",
-    date: "Feb 2026",
-    tags: ["DX", "Architecture"],
-    url: "#",
+    title: "Apakah Karier Kita Aman di Era AI?",
+    date: "Sep 2025",
+    tags: ["AI", "Career"],
+    url: "https://medium.com/@satyaf/apakah-karier-kita-aman-di-era-ai-fc3ad51eba4a",
   },
+//   {
+//     title: "Why I Build Systems for Developers, Not Just Users: A Deep Dive into DX",
+//     date: "Feb 2026",
+//     tags: ["DX", "Architecture"],
+//     url: "#",
+//   },
   {
     title: "Reducing Latency in RAG Systems: From Architecture to Production",
     date: "Jan 2026",
@@ -63,7 +69,9 @@ export default function Blog() {
             </p>
           </div>
           <a
-            href="#"
+            href="https://medium.com/@satyaf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center gap-2 text-accent font-medium hover:underline decoration-2 underline-offset-8"
           >
             Visit Medium <ArrowUpRight className="h-5 w-5" />
@@ -75,6 +83,8 @@ export default function Blog() {
             <a
               key={i}
               href={blog.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="blog-item group flex flex-col md:flex-row md:items-center justify-between py-8 gap-4 hover:opacity-80 transition-opacity"
             >
               <div className="flex flex-col gap-2">
