@@ -52,12 +52,12 @@ export default function Hero() {
 
         <div className="flex flex-col gap-2">
           <div className="overflow-hidden">
-            <h1 className="hero-line text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] uppercase">
+            <h1 className="hero-line text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
               I Develop <span className="text-accent italic">Systems</span>
             </h1>
           </div>
           <div className="overflow-hidden">
-            <h1 className="hero-line text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] uppercase">
+            <h1 className="hero-line text-6xl sm:text-7xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
               Not Just <span className="text-zinc-600 italic">Code.</span>
             </h1>
           </div>

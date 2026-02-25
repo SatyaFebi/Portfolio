@@ -6,9 +6,9 @@ export default function Contact() {
   return (
     <footer id="contact" className="py-40 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 lg:gap-32">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 md:gap-20 lg:gap-32 items-start">
           <div>
-            <h2 className="text-7xl md:text-9xl font-black tracking-tighter uppercase leading-none">
+            <h2 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter uppercase leading-none">
               LET&apos;S
               <br />
               <span className="text-accent">CONNECT.</span>
@@ -19,7 +19,7 @@ export default function Contact() {
             </p>
           </div>
 
-          <div className="flex flex-col justify-center gap-12">
+          <div className="flex flex-col justify-center gap-10 md:gap-14 pt-4 lg:pt-20">
             <div>
               <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-500 mb-3">
                 Email

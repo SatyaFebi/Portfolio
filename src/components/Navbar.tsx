@@ -80,31 +80,31 @@ export default function Navbar() {
           </a>
 
           {/* Desktop */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={(e) => handleScroll(e, link.href)}
-                className="text-[11px] font-bold uppercase tracking-[0.25em] text-zinc-400 hover:text-white transition-colors"
+                className="text-[10px] xl:text-[11px] font-bold uppercase tracking-[0.2em] xl:tracking-[0.25em] text-zinc-400 hover:text-white transition-colors whitespace-nowrap"
               >
                 {link.name}
               </a>
             ))}
-            <div className="h-4 w-px bg-zinc-700 mx-2" />
+            <div className="h-4 w-px bg-zinc-700 mx-1" />
             <a
               href="#contact"
               onClick={(e) => handleScroll(e, "#contact")}
-              className="rounded-full bg-white px-6 py-2.5 text-[11px] font-black uppercase tracking-widest text-black hover:bg-accent hover:text-white transition-all duration-300"
+              className="rounded-full bg-white px-5 py-2 xl:px-6 xl:py-2.5 text-[10px] xl:text-[11px] font-black uppercase tracking-widest text-black hover:bg-accent hover:text-white transition-all duration-300 whitespace-nowrap"
             >
               LET&apos;S TALK
             </a>
           </div>
 
-          {/* Mobile toggle */}
+          {/* Mobile/Tablet toggle */}
           <button
             className={cn(
-              "md:hidden text-white p-2 relative z-[70] transition-opacity duration-300",
+              "lg:hidden text-white p-2 relative z-[70] transition-opacity duration-300",
               isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
             )}
             onClick={() => setIsOpen(!isOpen)}
@@ -115,10 +115,10 @@ export default function Navbar() {
         </div>
       </nav>
 
-      {/* Mobile fullscreen menu */}
+      {/* Mobile/Tablet fullscreen menu */}
       <div
         className={cn(
-          "fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-6 transition-all duration-500 md:hidden",
+          "fixed inset-0 z-[60] bg-black/95 backdrop-blur-xl flex flex-col items-center justify-center gap-6 transition-all duration-500 lg:hidden",
           isOpen
             ? "opacity-100 pointer-events-auto"
             : "opacity-0 pointer-events-none"
