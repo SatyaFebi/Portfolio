@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
+import gsap from "@/lib/gsap";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,20 +44,20 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_20%_30%,#1e3a8a_0%,transparent_50%),radial-gradient(circle_at_80%_70%,#312e81_0%,transparent_50%)] opacity-20" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full">
-        <div className="hero-tags flex flex-wrap gap-3 mb-8">
-          <span className="px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-xs font-bold uppercase tracking-widest text-accent">Full-Stack Developer</span>
-          <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-zinc-400">Linux System Administrator</span>
-          <span className="px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-xs font-bold uppercase tracking-widest text-zinc-400">AI Enthusiast</span>
+        <div className="hero-tags flex flex-wrap gap-2 mb-8">
+          <span className="px-3 py-1 rounded-full border border-accent/20 bg-accent/5 text-[10px] font-bold uppercase tracking-widest text-accent">Full-Stack Developer</span>
+          <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-widest text-zinc-400">Linux System Administrator</span>
+          <span className="px-3 py-1 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-widest text-zinc-400">AI Enthusiast</span>
         </div>
 
         <div className="flex flex-col gap-2">
           <div className="overflow-hidden">
-            <h1 className="hero-line text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
+            <h1 className="hero-line text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] uppercase">
               I Develop <span className="text-accent italic">Systems</span>
             </h1>
           </div>
           <div className="overflow-hidden">
-            <h1 className="hero-line text-5xl md:text-8xl font-black tracking-tighter leading-[0.9] uppercase">
+            <h1 className="hero-line text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[0.9] uppercase">
               Not Just <span className="text-zinc-600 italic">Code.</span>
             </h1>
           </div>

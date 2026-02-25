@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <footer id="contact" className="py-40 border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-85">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-20 lg:gap-32">
           <div>
             <h2 className="text-7xl md:text-9xl font-black tracking-tighter uppercase leading-none">
               LET&apos;S

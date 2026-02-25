@@ -1,13 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "@/lib/gsap";
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const projects = [
   {

@@ -1,11 +1,8 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "@/lib/gsap";
 import { ArrowUpRight } from "lucide-react";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const blogs = [
   {
