@@ -2,15 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "@/lib/gsap";
-
-const experiences = [
-  {
-    company: "Honda Jakarta Center",
-    role: "Full-Stack Developer",
-    period: "July 2025 — Present",
-    desc: "Bridging complex business requirements with high-performance technical solutions. Building robust internal systems with a focus on Developer Experience and clean architecture.",
-  },
-];
+import { experiences } from "@/lib/experience";
 
 export default function Experience() {
   const containerRef = useRef<HTMLDivElement>(null);

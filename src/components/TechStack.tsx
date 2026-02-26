@@ -2,30 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "@/lib/gsap";
-import { Code2, Cpu, Container, LayoutGrid } from "lucide-react";
-
-const stacks = [
-  {
-    name: "Core",
-    icon: Code2,
-    tools: ["PHP (Laravel)", "JavaScript (Vue.js, Next.js, React.js)", "Python (AI/ML)", "Ionic & Capacitor (Mobile)", "MySQL", "PostgreSQL"],
-  },
-  {
-    name: "AI / Data",
-    icon: Cpu,
-    tools: ["RAG Architecture", "Vector DBs", "LLM Orchestration", "LangChain"],
-  },
-  {
-    name: "Tools",
-    icon: Container,
-    tools: ["Docker", "Git / GitHub", "Notion", "Ubuntu", "n8n", "Figma", "Postman", "WAHA (WhatsApp API)"],
-  },
-//   {
-//     name: "Architecture",
-//     icon: LayoutGrid,
-//     tools: ["Clean Architecture", "Modular Monolith", "RESTful API Design", "Service Layer Pattern"],
-//   },
-];
+import { stacks } from "@/lib/tech-stacks"
 
 export default function TechStack() {
   const containerRef = useRef<HTMLDivElement>(null);
