@@ -3,7 +3,9 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
-import gsap from "@/lib/gsap";
+import gsap, { ensureGsapPlugins } from "@/lib/gsap";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -17,6 +19,7 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -32,6 +35,7 @@ export default function Navbar() {
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     e.preventDefault();
+    ensureGsapPlugins();
     if (href === "#") {
       gsap.to(window, {
         duration: 1.5,
@@ -137,7 +141,13 @@ export default function Navbar() {
             key={link.name}
             href={link.href}
             onClick={(e) => handleScroll(e, link.href)}
-            className="text-3xl font-black uppercase tracking-tighter text-white hover:text-accent transition-all duration-300"
+            className={
+               clsx(
+                  "text-3xl font-black uppercase tracking-tighter text - white hover:text-accent transition-all duration-300", {
+                     'text-accent': pathname === link.href
+                  }
+               )
+            }
             style={{
               transitionDelay: isOpen ? `${i * 60}ms` : "0ms",
               transform: isOpen ? "translateY(0)" : "translateY(20px)",

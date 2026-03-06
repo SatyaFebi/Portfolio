@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "@/lib/gsap";
+import gsap, { ensureGsapPlugins } from "@/lib/gsap";
 import { stacks } from "@/lib/tech-stacks"
 
 export default function TechStack() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    ensureGsapPlugins();
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>(".stack-item").forEach((item) => {
         gsap.from(item, {

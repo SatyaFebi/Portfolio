@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "@/lib/gsap";
+import gsap, { ensureGsapPlugins } from "@/lib/gsap";
 import { ArrowUpRight } from "lucide-react";
 import { blogs } from "@/lib/blog"
 
@@ -9,6 +9,7 @@ export default function Blog() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    ensureGsapPlugins();
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>(".blog-item").forEach((item) => {
         gsap.from(item, {

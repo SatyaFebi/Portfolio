@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "@/lib/gsap";
+import Image from "next/image";
+import gsap, { ensureGsapPlugins } from "@/lib/gsap";
 
 export default function About() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    ensureGsapPlugins();
     const ctx = gsap.context(() => {
       gsap.from(".about-content", {
         scrollTrigger: {
@@ -48,6 +50,14 @@ export default function About() {
 
           {/* Right */}
           <div className="about-content space-y-8">
+            <Image
+             src="/assets/img/satya_pro.webp" 
+             alt="Satya Pro" 
+             width={500} 
+             height={500} 
+             className="rounded-lg bg-linear-[25deg,red_5%,yellow_60%,lime_90%,teal]"
+             
+            />
             <p className="text-xl md:text-2xl text-zinc-300 font-light leading-relaxed">
               I&apos;m Satya Febi Nugroho, a Full-Stack Developer intern at{" "}
               <span className="text-white font-semibold">Honda Jakarta Center</span>, I

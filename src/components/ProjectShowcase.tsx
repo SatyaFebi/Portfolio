@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import gsap from "@/lib/gsap";
+import gsap, { ensureGsapPlugins } from "@/lib/gsap";
 import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -11,6 +11,7 @@ export default function ProjectShowcase() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    ensureGsapPlugins();
     const ctx = gsap.context(() => {
       gsap.utils.toArray<HTMLElement>(".project-card").forEach((card) => {
         gsap.from(card, {
