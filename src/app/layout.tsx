@@ -3,6 +3,7 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import PreloaderWrapper from "@/components/PreloaderWrapper";
+import { Analytics } from "@vercel/analytics/next"
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -26,6 +27,7 @@ export default function RootLayout({
         <SmoothScroll>
           {children}
         </SmoothScroll>
+        <Analytics />
       </body>
     </html>
   );
