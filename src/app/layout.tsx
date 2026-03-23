@@ -4,6 +4,7 @@ import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import PreloaderWrapper from "@/components/PreloaderWrapper";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function RootLayout({
           {children}
         </SmoothScroll>
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
