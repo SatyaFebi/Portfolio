@@ -24,7 +24,7 @@ export const projects = [
       "Reusable retrieval service supporting multiple data sources",
     ],
     image: "/assets/img/rag-ai.png",
-    github: "https://github.com/SatyaFebi/Internal-RAG-System.git",
+    github: "https://github.com/SatyaFebi/NEW_RAG",
     external: "/not-found",
     badge: ["Currently in development", "Server Offline"],
   },
@@ -43,7 +43,7 @@ export const projects = [
     image: "/assets/img/millenium-service.png",
     github: "/not-found",
     external: "/not-found",
-    badge: ["Server Offline", "Private Repository"]
+    badge: ["Server Offline", "Private Repository"],
   },
   {
     title: "Secure Enterprise Audit & Reporting Ecosystem",
@@ -60,7 +60,7 @@ export const projects = [
     image: "/assets/img/reporting.png",
     github: "/not-found",
     external: "/not-found",
-    badge: ["Private Repository"]
+    badge: ["Private Repository"],
   },
   {
     title: "HJC Digital Showroom & CMS",
@@ -77,6 +77,6 @@ export const projects = [
     image: "/assets/img/web-hjc.png",
     github: "/not-found",
     external: "https://web-hjc.vercel.app",
-    badge: ["Private Repository"]
+    badge: ["Private Repository"],
   },
 ];
